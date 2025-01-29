@@ -122,6 +122,34 @@
 
 
 
+            // Queue Example
+
+            Console.WriteLine("\n\n\nQueue Example\n\n");
+
+            Queue<int> intQue = new Queue<int>();
+            intQue.Enqueue(10);
+            intQue.Enqueue(20);
+            intQue.Enqueue(30);
+
+            //num = intQue[1];
+
+            Console.WriteLine("Number of items: " + intQue.Count);
+            foreach (var i in intQue)
+                Console.WriteLine(i);
+
+            num = intQue.Dequeue();     // remove 10
+            Console.WriteLine("\n\nNum = " + num);
+            Console.WriteLine("Number of items: " + intQue.Count);
+
+            num = intQue.Peek();
+            Console.WriteLine("\n\nNum = " + num);
+            Console.WriteLine("Number of items: " + intQue.Count);
+
+
+
+
+
+
             Console.WriteLine("\n\n\n");
         }
     }
