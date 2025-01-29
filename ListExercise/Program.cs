@@ -56,6 +56,73 @@
                 Console.WriteLine(em);
             else
                 Console.WriteLine("Employee not found");
+
+            Console.WriteLine("\n\n\n");
+
+
+
+
+            // Dictionary Example
+            Console.WriteLine("Dictionary Example:\n\n");
+
+
+            Dictionary<int, Employee> dictEmps = new Dictionary<int, Employee>();
+            dictEmps.Add(emp1.Id, emp1);
+            dictEmps.Add(emp2.Id, emp2);
+            dictEmps.Add(emp3.Id, emp3);
+
+            //dictEmps.Add(emp1.Id, emp1);
+
+            //Console.Write("\n\nEnter key: ");
+            //int key = int.Parse(Console.ReadLine());
+
+            //if (dictEmps.ContainsKey(key))
+            //{
+            //    Employee employee = dictEmps[key];
+            //    Console.WriteLine(employee);
+            //}
+            //else
+            //    Console.WriteLine("Invalid key. Please try again");
+
+
+            foreach (var e in dictEmps)
+            {
+                int key = e.Key;
+                Employee employee = e.Value;
+
+                Console.WriteLine("Key = " + key);
+                Console.WriteLine(employee);
+            }
+
+
+
+            // Stack example
+
+            Console.WriteLine("\n\n\nStack Example\n\n");
+
+            Stack<int> intStack = new Stack<int>();
+            intStack.Push(10);
+            intStack.Push(20);
+            intStack.Push(30);
+
+            //int num = intStack[1];
+
+            Console.WriteLine("Number of items: " + intStack.Count);
+            foreach (var i in intStack)
+                Console.WriteLine(i);
+
+            int num = intStack.Pop();   // remove 30
+            Console.WriteLine("\n\nNum = " + num);
+            Console.WriteLine("Number of items: " + intStack.Count);
+
+            num = intStack.Peek();
+            Console.WriteLine("\n\nNum = " + num);
+            Console.WriteLine("Number of items: " + intStack.Count);
+
+
+
+
+            Console.WriteLine("\n\n\n");
         }
     }
 }
